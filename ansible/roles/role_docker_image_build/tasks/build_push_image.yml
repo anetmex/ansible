@@ -1,7 +1,6 @@
 - name: build image
   docker_image:
-    build:
-      path: /home/deploy/
+    build.path: /home/deploy/
     name: "simple-rest-app_{{ version }}"
     tag: latest
     push: yes
