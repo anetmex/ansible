@@ -1,0 +1,9 @@
+- name: run docker container
+  docker_container:
+    name:
+    image: "simple-rest-app_{{ version }}"
+#    command: redis-server --appendonly yes
+    state: present
+    recreate: yes
+    ports:
+     - "{{ app_port }}:8085"

@@ -1,0 +1,2 @@
+registry_host: {{ docker_host }}
+registry_port: 5000
