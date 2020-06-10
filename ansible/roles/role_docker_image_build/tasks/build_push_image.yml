@@ -1,4 +1,5 @@
 - name: build image
+  become_user: deploy
   docker_image:
     build:
       path: /home/deploy/
