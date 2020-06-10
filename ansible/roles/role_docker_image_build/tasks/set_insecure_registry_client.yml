@@ -1,6 +1,4 @@
 - name: set up insecure-registry for client
-  vars:
-    docker_repository: "{{ registry_host }}:{{ registry_port }}"
   become: yes
   template:
     src: /role_docker_image_build/template/daemon.json
