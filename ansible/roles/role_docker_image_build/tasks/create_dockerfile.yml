@@ -2,6 +2,6 @@
   template:
     src: roles/role_docker_image_build/template/DockerFile
     dest: /home/deploy/
-    owner: deploy
-    group: wheel
-    mode: '0644'
+    #owner: deploy
+    #group: wheel
+    #mode: '0644'
