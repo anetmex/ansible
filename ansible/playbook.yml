@@ -5,3 +5,5 @@
   roles:
     - role_provisioning_ubuntu
     - role_deploy
+    - role_docker_image_build
+    - role_docker_image_deploy
