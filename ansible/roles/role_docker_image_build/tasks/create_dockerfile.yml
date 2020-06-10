@@ -1,6 +1,6 @@
 - name: Template a file to /home/deploy
   template:
-    src: /role_docker_image_build/template/DockerFile
+    src: roles/role_docker_image_build/template/DockerFile
     dest: /home/deploy/
     owner: deploy
     group: wheel
