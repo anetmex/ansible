@@ -7,6 +7,6 @@
     name: "{{ registry_host }}:{{ registry_port }}/simple-rest-app_{{ version }}"
     tag: latest
     push: yes
-    repository: "{{ registry_host }}:{{ registry_port }}"
+    #repository: "{{ registry_host }}:{{ registry_port }}"
     source: build
     #state: present
