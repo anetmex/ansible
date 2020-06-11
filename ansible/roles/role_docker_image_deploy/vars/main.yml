@@ -1,0 +1,6 @@
+docker_host: 18.130.132.28
+app_port: 8087
+registry_host: "{{ docker_host }}"
+registry_port: 5000
+docker_repository: "{{ registry_host }}:{{ registry_port }}"
+version: 1.0

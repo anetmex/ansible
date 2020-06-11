@@ -3,7 +3,7 @@
     name:
     image: "{{ registry_host }}:{{ registry_port }}/simple-rest-app_{{ version }}"
 #    command: redis-server --appendonly yes
-    state: present
+    state: running
     recreate: yes
     ports:
      - "{{ app_port }}:8085"
