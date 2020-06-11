@@ -1,9 +1,9 @@
 - name: pull image from registry
   docker_image:
     path: /home/deploy/
-    name: "simple-rest-app_{{ version }}"
+    name: "{{ registry_host }}:{{ registry_port }}/simple-rest-app_{{ version }}"
     tag: latest
     pull: yes
-    repository: "{{ registry_host }}:{{ registry_port }}"
+    #repository: "{{ registry_host }}:{{ registry_port }}"
     source: pull
     state: present
