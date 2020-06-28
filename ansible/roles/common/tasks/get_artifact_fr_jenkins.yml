@@ -1,7 +1,20 @@
 ---
 - name: copy artifact
-  become_user: deploy
-  copy:
-    src: /var/lib/jenkins/.m2/repository/com/simple/restclient/client/1.0/client-1.0-app.jar
-    dest: /home/deploy/
+#  become_user: deploy
+#  copy:
+    #src: /var/lib/jenkins/.m2/repository/com/simple/restclient/client/1.0/client-1.0-app.jar
+#    src:
+#    dest: /home/deploy/
+  maven_artifact:
+    version: latest
+    artifact_id: client
+    group_id: com.simple.restclient
+    repository_url: 'http://78.27.132.144:8082/artifactory/'
+    username: admin
+    password: P@ssw0rd
+    dest: /tmp/
+    keep_name: yes
+
+
+
 
