@@ -9,7 +9,7 @@
     version: latest
     artifact_id: client
     group_id: com.simple.restclient
-    repository_url: 'http://78.27.132.144:8082/artifactory/'
+    repository_url: 'http://78.27.132.144:8082/artifactory/libs-release-local/'
     username: admin
     password: P@ssw0rd
     dest: /tmp/
