@@ -1,6 +1,6 @@
 ---
 - name: copy artifact
-#  become_user: deploy
+  become_user: deploy
 #  copy:
     #src: /var/lib/jenkins/.m2/repository/com/simple/restclient/client/1.0/client-1.0-app.jar
 #    src:
@@ -12,7 +12,7 @@
     repository_url: 'http://78.27.132.144:8082/artifactory/libs-release-local/'
     username: admin
     password: P@ssw0rd
-    dest: /tmp/
+    dest: /home/deploy/
     keep_name: yes
 
 
