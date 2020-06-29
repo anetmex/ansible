@@ -1,4 +1,4 @@
 ---
 - name: start app
   become_user: deploy
-  shell: nohup java -jar /home/deploy/client-1.0.{{ build_number }}-app.jar &
+  shell: "nohup java -jar '/home/deploy/client-1.0.{{ build_number }}-app.jar' &"
