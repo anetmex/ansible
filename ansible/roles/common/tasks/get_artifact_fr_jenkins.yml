@@ -7,8 +7,8 @@
 #    src:
 #    dest: /home/deploy/
   maven_artifact:
-    #version: latest
-    version: '1.0.{{ build_number }}'
+    version: latest
+    #version: '1.0.{{ build_number }}'
     artifact_id: client
     group_id: com.simple.restclient
     repository_url: 'http://78.27.132.144:8082/artifactory/libs-release-local/'
