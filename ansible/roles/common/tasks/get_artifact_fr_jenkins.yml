@@ -15,7 +15,7 @@
     repository_url: 'http://78.27.132.144:8082/artifactory/libs-release-local/'
     username: admin
     password: P@ssw0rd
-    dest: /tmp/
+    dest: /home/deploy/
     keep_name: yes
 
 
