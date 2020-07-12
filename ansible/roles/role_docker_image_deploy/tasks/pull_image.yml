@@ -3,9 +3,12 @@
     build:
       path: /home/deploy/
       pull: yes
-    name: "{{ registry_host }}:{{ registry_port }}/simple-rest-app_{{ version }}"
-    tag: latest
+    name: "{{ registry_host }}:{{ registry_port }}/simple-rest-app_1.0"
+    tag: '{{ item }}'
     #pull: yes
     #repository: "{{ registry_host }}:{{ registry_port }}"
     source: pull
     state: present
+  loop:
+    - 'latest'
+    - '{{ build_number }}'
