@@ -1,5 +1,5 @@
 FROM openjdk:11-jdk-slim
 WORKDIR /home/app
-COPY ./client-1.0-app.jar .
+COPY ./client-1.0.{{ version }}-app.jar .
 EXPOSE 8085
-ENTRYPOINT  java -jar client-1.0-app.jar
+ENTRYPOINT  java -jar client-1.0.{{ version }}-app.jar
