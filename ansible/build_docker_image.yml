@@ -6,3 +6,5 @@
  #   - role_provisioning_ubuntu
  #   - role_deploy
     - role_docker_image_build
+  vars:
+    version: "{{ build_number }}"
