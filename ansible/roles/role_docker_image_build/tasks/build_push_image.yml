@@ -5,7 +5,7 @@
     build:
       path: /home/deploy/
       dockerfile: /home/deploy/DockerFile
-    name: "{{ registry_host }}:{{ registry_port }}/simple-rest-app_{{ version }}"
+    name: "{{ registry_host }}:{{ registry_port }}/simple-rest-app_{{ build_number }}"
     tag: latest
     push: yes
     #repository: "{{ registry_host }}:{{ registry_port }}"
