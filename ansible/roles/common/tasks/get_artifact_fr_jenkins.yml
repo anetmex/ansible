@@ -8,7 +8,7 @@
 #    dest: /home/deploy/
   maven_artifact:
     #version: latest
-    version: '1.0.{{ build_number }}'
+    version: '{{ build_number }}'
     artifact_id: client
     group_id: com.simple.restclient
     classifier: app
