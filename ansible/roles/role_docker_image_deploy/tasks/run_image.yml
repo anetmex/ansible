@@ -1,7 +1,7 @@
 - name: run docker container
   docker_container:
     name:
-    image: "{{ registry_host }}:{{ registry_port }}/simple-rest-app_{{ version }}"
+    image: "{{ registry_host }}:{{ registry_port }}/simple-rest-app_1.0:{{ version }}"
 #    command: redis-server --appendonly yes
     state: started
     recreate: yes
