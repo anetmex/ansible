@@ -39,7 +39,8 @@
 
   - name: Install Docker Module for Python
     pip:
-      name: '{{ item }}'
-    loop:
-      - docker
-      - docker-py
+      name: docker
+
+  - name: Install Docker Module for Python 2
+    pip:
+      name: docker-py
