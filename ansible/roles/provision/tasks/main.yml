@@ -1,4 +1,2 @@
-- import_roles: geerlingguy.docker
-- import_roles: geerlingguy.java
 - import_tasks: setup_user_deploy.yml
 - import_tasks: set_insecure_registry_client.yml
