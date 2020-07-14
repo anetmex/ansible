@@ -13,4 +13,5 @@
       java_packages:
         - openjdk-11-jdk
     - role: geerlingguy.docker
+    - role: geerlingguy.pip
     - role: provision
