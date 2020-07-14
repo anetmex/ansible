@@ -1,4 +1,4 @@
-docker_host: 3.8.97.63
+docker_host: 35.178.200.145
 app_port: 8087
 registry_host: "{{ docker_host }}"
 registry_port: 5000
