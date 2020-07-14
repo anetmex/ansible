@@ -1,4 +1,3 @@
----
 - name: pip install lxml
   pip:
     name: lxml
