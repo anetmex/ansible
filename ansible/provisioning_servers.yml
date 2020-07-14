@@ -2,5 +2,6 @@
 - name: Provisioning
   hosts: CI_linux
   become: yes
+  vars: var/provision.yml
   roles:
     - role_provisioning_ubuntu
