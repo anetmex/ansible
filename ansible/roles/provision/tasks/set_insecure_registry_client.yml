@@ -1,7 +1,7 @@
 - name: set up insecure-registry for client
   #become: yes
   template:
-    src: daemon.json
+    src: template/daemon.json
     dest: /etc/docker
     owner: root
     group: root
