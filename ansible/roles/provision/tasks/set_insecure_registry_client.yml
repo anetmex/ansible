@@ -1,5 +1,5 @@
 - name: set up insecure-registry for client
-  become: yes
+  #become: yes
   template:
     src: daemon.json
     dest: /etc/docker
