@@ -10,5 +10,4 @@
     source: pull
     state: present
   loop:
-    - 'latest'
-    - '{{ build_number }}'
+    - [ 'latest', '{{ build_number }}' ]
