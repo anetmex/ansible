@@ -26,7 +26,7 @@
 - include_tasks: setup-RedHat.yml
   when: ansible_os_family == 'RedHat'
 
--name: update cache
+- name: update cache
   apt:
     update_cache: yes
   when: ansible_os_family == 'Debian'
