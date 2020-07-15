@@ -6,18 +6,16 @@
     state: present
   when: ansible_os_family == 'Debian'
 
-- name: Ensure Pip2 is installed.
+- name: Ensure Pipall2 is installed.
   package:
     #name: "{{ pip_package }}"
     name: python2-pip
     state: present
-  when: ansible_os_family == 'RedHat'
-
-- name: Ensure Pip3 is installed.
-  package:
-    #name: "{{ pip_package }}"
-    name: python3-pip
-    state: present
+  loop:
+    - python27
+    - python2-pip
+    - python36
+    - python3-pip
   when: ansible_os_family == 'RedHat'
 
 - name: Ensure pip_install_packages are installed.
