@@ -11,7 +11,7 @@
     #name: "{{ pip_package }}"
     name: python2-pip
     state: present
-  when: "ansible_os_family == 'Debian'"
+  when: "ansible_os_family == 'RedHat'"
 
 - name: Ensure pip_install_packages are installed.
   pip:
