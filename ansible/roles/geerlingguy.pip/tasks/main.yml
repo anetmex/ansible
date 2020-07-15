@@ -9,7 +9,7 @@
 - name: Ensure Pipall2 is installed.
   package:
     #name: "{{ pip_package }}"
-    name: python2-pip
+    name: "{{ item }}"
     state: present
   loop:
     - python27
