@@ -1,7 +1,7 @@
 - name: pip install lxml
   pip:
     name: lxml
-    executable: pip3
+    executable: pip2
   when: "ansible_os_family == 'RedHat'"
 
 - name: pip install lxml
