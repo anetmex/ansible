@@ -13,5 +13,7 @@
       java_packages:
         - openjdk-11-jdk
     - role: geerlingguy.docker
+    - role: geerlingguy.repo-epel
+      when: "ansible_os_family == 'RedHat'"
     - role: geerlingguy.pip
     - role: provision
