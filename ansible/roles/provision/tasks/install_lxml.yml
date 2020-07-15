@@ -1,8 +1,8 @@
 - name: pip install lxml
   pip:
     name: lxml
-  when: ansible_os_family == 'Debian'
+  when: "ansible_os_family == 'Debian'"
 - name: pip install lxml
   pip2:
     name: lxml
-  when: ansible_os_family == 'RedHat'
+  when: "ansible_os_family == 'RedHat'"
