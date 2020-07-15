@@ -17,6 +17,7 @@
     password: P@ssw0rd
     dest: /home/deploy/
     keep_name: yes
+    mode: 0644
 
 
 
