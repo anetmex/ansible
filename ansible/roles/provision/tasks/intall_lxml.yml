@@ -1,5 +1,4 @@
 - name: pip install lxml
   pip:
     name: lxml
-
   #when: ansible_os_family == 'Debian'
