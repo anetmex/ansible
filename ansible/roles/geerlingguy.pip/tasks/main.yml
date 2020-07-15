@@ -6,8 +6,8 @@
     state: present
   when: ansible_os_family == 'Debian'
 
-- name: Ensure Pip is installed.
-  package:
+- name: Ensure Pip3 is installed.
+  yum:
     #name: "{{ pip_package }}"
     name: python3-pip
     state: present
