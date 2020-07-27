@@ -1,7 +1,3 @@
-- name: include vars
-  include_vars:
-    file: 'vars/main.yml'
-
 - name: copy certificate
   copy:
     src: /home/ubuntu/secret/domain.crt
