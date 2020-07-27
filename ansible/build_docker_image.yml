@@ -1,6 +1,6 @@
 ---
 - name: Build image
-  hosts: hosts
+  hosts: docker
   become: yes
   roles:
  #   - role_provisioning_ubuntu
