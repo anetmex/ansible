@@ -1,0 +1,18 @@
+- name: copy artifact
+  become: yes
+#  copy:
+    #src: /var/lib/jenkins/.m2/repository/com/simple/restclient/client/1.0/client-1.0-app.jar
+#    src:
+#    dest: /home/deploy/
+  maven_artifact:
+    #version: latest
+    version: '{{ build_number }}'
+    artifact_id: client
+    group_id: com.simple.restclient
+    classifier: app
+    repository_url: 'http://{{ artifactory_url}}/artifactory/libs-release-local/'
+    username: admin
+    password: P@ssw0rd
+    dest: /home/deploy/
+    keep_name: yes
+    mode: 0644
