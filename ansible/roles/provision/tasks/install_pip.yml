@@ -9,8 +9,8 @@
     name: "{{ item }}"
     state: present
   loop:
-#    - python27
-#    - python2-pip
+    - python27
+    - python2-pip
     - python36
     - python3-pip
   when: ansible_os_family == 'RedHat'
