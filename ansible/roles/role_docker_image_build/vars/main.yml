@@ -1,7 +1,7 @@
 docker_host: 10.0.1.117
 app_port: 8087
 registry_host: "{{ docker_host }}"
-registry_port: 5000
+registry_port: 443
 docker_repository: "{{ registry_host }}:{{ registry_port }}"
 artifactory_url: "10.0.1.243:8082"
 #version: "{{ build_number }}"
