@@ -1,3 +1,4 @@
+- import_tasks: roles/common/tasks/get_artifact_fr_jenkins.yml
 - import_tasks: create_dockerfile.yml
 #- import_tasks: set_insecure_registry_client.yml
 - import_tasks: build_push_image.yml
