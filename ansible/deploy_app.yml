@@ -3,6 +3,6 @@
   hosts: hosts
   #become: yes
   vars:
-    artifactory_url: "http://10.0.1.243:8082/"
+    artifactory_url: "10.0.1.243:8082"
   roles:
     - role_deploy
