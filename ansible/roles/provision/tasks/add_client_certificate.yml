@@ -5,7 +5,7 @@
 - name: copy certificate
   copy:
     src: /home/ubuntu/secret/domain.crt
-    dest: '{{ ca_path_[ansible_os_family] }}'
+    dest: 'ca_path_{{ ansible_os_family }}'
 #    dest: /usr/local/share/ca-certificates
   notify:
     - update trusted ca {{ ansible_os_family }}
