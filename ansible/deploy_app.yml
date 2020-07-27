@@ -1,6 +1,8 @@
 ---
 - name: Provisioning
   hosts: hosts
-  become: yes
+  #become: yes
+  vars:
+    artifactory_url: "http://10.0.1.243:8082/"
   roles:
     - role_deploy

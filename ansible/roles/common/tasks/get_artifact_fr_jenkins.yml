@@ -12,7 +12,7 @@
     artifact_id: client
     group_id: com.simple.restclient
     classifier: app
-    repository_url: 'http://78.27.132.144:8082/artifactory/libs-release-local/'
+    repository_url: 'http://{{ artifactory_url}}/artifactory/libs-release-local/'
     username: admin
     password: P@ssw0rd
     dest: /home/deploy/
