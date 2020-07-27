@@ -1,6 +1,8 @@
-- name: copy certificate
+- name: include vars
   include_vars:
     file: 'vars/main.yml'
+
+- name: copy certificate
   copy:
     src: /home/ubuntu/secret/domain.crt
     dest: '{{ ca_path[ansible_os_family][ansible_distribution_major_version|int] }}/'
