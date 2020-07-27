@@ -4,7 +4,7 @@
     state: present
   when: ansible_os_family == 'Debian'
 
-- name: Ensure Pipall2 is installed.
+- name: Ensure Pipall2 is installed, RedHat
   package:
     name: "{{ item }}"
     state: present
@@ -15,13 +15,13 @@
     - python3-pip
   when: ansible_os_family == 'RedHat'
 
-- name: pip install lxml
+- name: pip install lxml RedHat
   pip:
     name: lxml
     executable: pip3
   when: ansible_os_family == 'RedHat'
 
-- name: pip install lxml
+- name: pip install lxml Debian
   pip:
     name: lxml
   when: ansible_os_family == 'Debian'
