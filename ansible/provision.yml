@@ -4,15 +4,15 @@
   become: yes
   vars_files: 'vars/provision.yml'
   roles:
-    - role: geerlingguy.java
-      when: "ansible_os_family == 'RedHat'"
-      java_packages:
-        - java-11-openjdk
-    - role: geerlingguy.java
-      when: "ansible_os_family == 'Debian'"
-      java_packages:
-        - openjdk-11-jdk
-    - role: geerlingguy.docker
+#    - role: geerlingguy.java
+#      when: "ansible_os_family == 'RedHat'"
+#      java_packages:
+#        - java-11-openjdk
+#    - role: geerlingguy.java
+#      when: "ansible_os_family == 'Debian'"
+#      java_packages:
+#        - openjdk-11-jdk
+#    - role: geerlingguy.docker
     #- role: geerlingguy.repo-epel
     #  when: "ansible_os_family == 'RedHat'"
     #- role: geerlingguy.pip
