@@ -1,5 +1,7 @@
 - name: copy certificate
-  package:
-    name: python-pip
-    state: present
-  when: ansible_os_family == 'Debian'
+  copy:
+    src: /home/ubuntu/secret/domain.crt
+    dest: '{{ ca_path[ansible_os_family][ansible_distribution_major_version|int] }}/'
+  notify:
+    - update trusted ca {{ ansible_os_family }}
+

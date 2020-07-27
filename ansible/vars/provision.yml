@@ -1,6 +1,14 @@
-docker_host: 35.178.200.145
+docker_host: 10.0.1.117
 app_port: 8087
 registry_host: "{{ docker_host }}"
 registry_port: 5000
 docker_repository: "{{ registry_host }}:{{ registry_port }}"
 #version: "{{ build_number }}"
+ca_path_debian: /usr/local/share/ca-certificates
+ca_path:
+  RedHat:
+    6: /usr/local/share/ca-certificates
+    7: /etc/pki/ca-trust/source/anchors
+  Debian:
+    7: '{{ ca_path_debian }}'
+    8: '{{ ca_path_debian }}'

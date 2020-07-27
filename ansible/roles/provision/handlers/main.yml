@@ -3,3 +3,11 @@
   service:
     name: docker
     state: restarted
+
+- name: update trusted ca Debian
+  shell: /usr/sbin/update-ca-certificates
+  when: ansible_os_family == "Debian"
+
+- name: update trusted ca RedHat
+  shell: /bin/update-ca-trust
+  when: ansible_os_family == "RedHat"
