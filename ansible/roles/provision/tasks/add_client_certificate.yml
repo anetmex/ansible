@@ -1,3 +1,13 @@
+- name: Set fact for Debian
+  set_fact:
+    ca_path: /usr/local/share/ca-certificates
+  when: ansible_os_family == "Debian"
+
+- name: Set fact for RedHat
+  set_fact:
+    ca_path: /etc/pki/ca-trust/source/anchors
+  when: ansible_os_family == "RedHat"
+
 - name: copy certificate
   copy:
     src: /home/ubuntu/secret/domain.crt
@@ -5,9 +15,3 @@
 #    dest: /usr/local/share/ca-certificates
   notify:
     - update trusted ca {{ ansible_os_family }}
-  vars:
-#    ca_path: "ca_path_{{ ansible_os_family }}"
-    ca_path: /usr/local/share/ca-certificates
-    when: "ansible_os_family == 'Debian'"
-    ca_path: /etc/pki/ca-trust/source/anchors
-    when: "ansible_os_family == 'RedHat'"
