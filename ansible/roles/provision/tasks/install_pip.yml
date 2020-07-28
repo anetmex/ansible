@@ -20,8 +20,12 @@
 
 - name: pip install lxml RedHat
   pip:
-    name: lxml
+    name: "{{ item }}"
     executable: pip3
+  loop:
+    - docker
+#    - docker-py
+    - lxml
   when: ansible_os_family == 'RedHat'
 
 - name: pip install lxml Debian
@@ -29,6 +33,6 @@
     name: "{{ item }}"
   loop:
     - docker
-    - docker-py
+#    - docker-py
     - lxml
   when: ansible_os_family == 'Debian'
