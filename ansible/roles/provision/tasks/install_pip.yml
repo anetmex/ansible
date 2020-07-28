@@ -1,7 +1,10 @@
 - name: Ensure Pip is installed.
   package:
-    name: python-pip
+    name: "{{ item }}"
     state: present
+  loop:
+    - python-pip
+    - python3-pip
   when: ansible_os_family == 'Debian'
 
 - name: Ensure Pipall2 is installed, RedHat
