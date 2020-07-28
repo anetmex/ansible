@@ -26,5 +26,9 @@
 
 - name: pip install lxml Debian
   pip:
-    name: lxml
+    name: "{{ item }}"
+  loop:
+    - docker
+    - docker-py
+    - lxml
   when: ansible_os_family == 'Debian'
