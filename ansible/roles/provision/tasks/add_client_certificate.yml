@@ -6,6 +6,8 @@
   notify:
     - update trusted ca {{ ansible_os_family }}
   vars:
-    ca_path: "ca_path_{{ ansible_os_family }}"
-    ca_path_Debian: /usr/local/share/ca-certificates
-    ca_path_RedHat: /etc/pki/ca-trust/source/anchors
+#    ca_path: "ca_path_{{ ansible_os_family }}"
+    ca_path: /usr/local/share/ca-certificates
+    when: "ansible_os_family == 'Debian'"
+    ca_path: /etc/pki/ca-trust/source/anchors
+    when: "ansible_os_family == 'RedHat'"
