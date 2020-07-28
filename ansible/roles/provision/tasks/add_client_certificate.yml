@@ -14,5 +14,5 @@
     dest: '{{ ca_path }}'
 #    dest: /usr/local/share/ca-certificates
   notify:
-    - update trusted ca {{ ansible_os_family }}
-    - restart docker
+    - 'update trusted ca {{ ansible_os_family }}'
+    - 'restart docker'
