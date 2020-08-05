@@ -1,7 +1,7 @@
 ---
 - name: Deploy docker image
   hosts: hosts
-  become: yes
+#  become: yes
   roles:
  #   - role_provisioning_ubuntu
  #   - role_deploy

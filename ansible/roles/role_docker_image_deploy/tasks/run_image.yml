@@ -1,3 +1,7 @@
+- name: Include vars
+  include_vars:
+    file: vars/main.yaml
+
 - name: run docker container
   docker_container:
     name:
