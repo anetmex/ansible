@@ -2,6 +2,8 @@
 - name: Deploy docker image
   hosts: hosts
   become: yes
+  vars:
+    app_port: 8087
   roles:
  #   - role_provisioning_ubuntu
  #   - role_deploy
